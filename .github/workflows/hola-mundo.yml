@@ -1,11 +1,21 @@
-name: Aprendiendo GitHub Actions
-run-name: ¡Estoy aprendiendo GitHub Actions!
-on: [push]
+name: Hello World
+
+on:
+  push:
+    branches: [aprendiendo-github-actions]
+
 jobs:
-  hola-mundo:
+  hello-world:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v3
-      - name: Correr script
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Run hola-mundo.js
         run: node hola-mundo.js
