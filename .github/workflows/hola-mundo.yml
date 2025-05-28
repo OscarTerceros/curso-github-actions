@@ -5,7 +5,7 @@ on:
     branches: [aprendiendo-github-actions]
 
 jobs:
-  hello-world:
+  hola-mundo:
     runs-on: ubuntu-latest
 
     steps:
